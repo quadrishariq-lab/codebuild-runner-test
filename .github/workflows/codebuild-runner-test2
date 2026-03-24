@@ -6,9 +6,9 @@ on:
 jobs:
   job1:
     runs-on:
-codebuild-simple-runner-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-simple-runner-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-name: Print job1 details
+      - name: Print job1 details
         run: |
           echo "THIS_IS=job1"
           echo "RUN_ID=${{ github.run_id }}"
@@ -17,9 +17,9 @@ name: Print job1 details
 
   job2:
     runs-on:
-codebuild-simple-runner-${{ github.run_id }}-${{ github.run_attempt }}
+      - codebuild-simple-runner-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
-name: Print job2 details
+      - name: Print job2 details
         run: |
           echo "THIS_IS=job2"
           echo "RUN_ID=${{ github.run_id }}"
